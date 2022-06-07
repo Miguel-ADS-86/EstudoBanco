@@ -1,2 +1,2 @@
 Bonon aula: 27
-Luiz Santana: no modulo CASE DO SQL.
+Luiz Santana: no modulo de inner join.
