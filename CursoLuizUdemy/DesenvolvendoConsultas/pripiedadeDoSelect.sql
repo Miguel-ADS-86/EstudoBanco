@@ -253,7 +253,8 @@ FROM TB_FUNC
 /*RESUMO DO CASE, ELE CRIA UMA NOVA COLUNA COM O VALOR A SER INSERIDO NA MESMA DE ACORDO 
 COM AS CONDIÇÕES INSERIDAS NELE. */
  
--- DISTINCT
+-- DISTINCT elimina linhas duplicadas de um registro, retornando apenas um registro 
+-- daquele dado
  
 SELECT DISTINCT NOME 
 FROM TB_FUNC
@@ -264,7 +265,16 @@ FROM TB_FUNC
 SELECT DISTINCT NOME, SALARIO, DATANASCIMENTO 
 FROM TB_FUNC
  
--- TOP
+-- TOP objetivo desta clausula é poder limitar o numero de registros que serão
+-- mostrados dentro de um select.
+/*Sintax:
+  SELECT TOP nº de linhas de retorno coluna ou colunas
+  FROM nome_tabela se quiser poder ter filtros ou condições
+
+  quando usamos o order by ele influencia diretamente no retorno do top
+
+
+*/
 SELECT 
 TOP 5 MATRICULA, 
 NOME 
@@ -274,4 +284,5 @@ SELECT
 TOP 5 MATRICULA, 
 NOME 
 FROM TB_FUNC 
-ORDER BY MATRICULA DESC
+ORDER BY MATRICULA DESC -- quero ordena da maior matricula para a menor
+                        -- ASC  da menor para maior
